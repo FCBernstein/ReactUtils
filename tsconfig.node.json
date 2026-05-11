@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "es2023",
+    "target": "es6",
     "lib": [
-      "ES2023"
+      "ES6"
     ],
-    "module": "nodenext",
+    "module": "esnext",
     "types": [
       "node"
     ],
     "skipLibCheck": true,
     /* Bundler mode */
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": false,
+    "allowSyntheticDefaultImports": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": false,
@@ -23,9 +24,10 @@
     "noFallthroughCasesInSwitch": true,
     "declaration": true,
     "declarationDir": "./dist",
-    "outDir": "./dist"
+    "outDir": "./dist",
   },
   "include": [
-    "vite.config.ts"
+    "vite.config.ts",
+    "src"
   ]
 }

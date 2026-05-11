@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "es2023",
+    "target": "es6",
     "lib": [
-      "ES2023",
+      "ES6",
       "DOM"
     ],
-    "module": "nodenext",
+    "module": "esnext",
     "types": [
       "vite/client"
     ],
     "skipLibCheck": true,
     /* Bundler mode */
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
     "verbatimModuleSyntax": true,
@@ -23,9 +23,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "rootDir": "src"
   },
   "include": [
-    "src"
+    "src/*"
   ]
 }

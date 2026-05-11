@@ -1,11 +1,11 @@
 {
   "name": "@fcbernstein/reactutils",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npx tsc --project tsconfig.json",
+    "build": "npx tsc --project tsconfig.json && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
