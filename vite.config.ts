@@ -5,7 +5,7 @@ import path from 'path';
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(__dirname, 'src/index.js'),
       name: 'package name',
       formats: ['es', 'umd'],
       fileName: (format) => `index.${format}.js`

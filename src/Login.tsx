@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 import { getUserStore } from "./UserStore.js";
+import { useState } from "react";
 
 type forminput = { username: string, password: string }
 
@@ -11,11 +12,30 @@ export default function Login() {
     const logout = useUserStore((state) => state.logout);
     const username = useUserStore((state) => state.userName);
     const isLoggedIn = useUserStore(state => state.isLoggedIn);
-    const onSubmit = async (data: forminput) => await login(data.username, data.password);
+    const [crashmsg, setCrashmsg] = useState("");
+    const errormsg = useUserStore(state => state.errorMessage)
+    const onSubmit = async (data: forminput) => {
+        try {
+            setCrashmsg("");
+            await login(data.username, data.password);
+
+        }
+        catch (error: unknown) {
+            if (error instanceof Error) {
+                setCrashmsg(error.message);
+            }
+            else {
+                setCrashmsg("Unknown Error");
+            }
+
+        }
+
+    };
 
     return (
         <>
             <div>Logged In = {isLoggedIn.toString()}</div>
+            <h2 className="text-danger">{crashmsg || errormsg}</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label>Username</label>
                 <input type="text" {...register('username', { required: 'Username is required' })} />
