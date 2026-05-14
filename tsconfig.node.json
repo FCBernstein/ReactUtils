@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "es6",
+    "target": "es2020",
+    "useDefineForClassFields": true,
     "lib": [
-      "ES6"
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
     ],
     "module": "nodenext",
     "types": [
@@ -11,12 +14,16 @@
     ],
     "skipLibCheck": true,
     /* Bundler mode */
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": false,
+    "jsx": "react-jsx",
+    "strict": true,
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
