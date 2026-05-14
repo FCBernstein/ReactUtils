@@ -6,13 +6,13 @@
       "ES6",
       "DOM"
     ],
-    "module": "esnext",
+    "module": "node20",
     "types": [
       "vite/client"
     ],
     "skipLibCheck": true,
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "nodenext",
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
     "verbatimModuleSyntax": true,
