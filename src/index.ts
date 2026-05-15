@@ -1,3 +1,3 @@
-export * from "./DataUtil.js"
-export * from "./UserStore.js"
-export * from "./useSessionTimeout.js"
+export * from "./DataUtil"
+export * from "./UserStore"
+export * from "./useSessionTimeout"
